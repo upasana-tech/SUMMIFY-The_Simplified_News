@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Summify App</title>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link href="static/css/style.css" rel="stylesheet">
+	<meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="static/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+
+
+
+
+<style type="text/css">
+	.main-section{
+	margin:0 auto;
+	padding: 20px;
+	margin-top: 100px;
+	background-color: #fff;
+	box-shadow: 0px 0px 20px #c1c1c1;
+}
+
+#custom_card{
+	background-color:#ffe6ff;
+	color:#000;
+	padding:10px;
+
+}
+#custom_card2{
+	background-color:#ffb3ff;
+	color:#000;
+	padding:10px;
+}
+
+#custom_card3{
+	background-color:#fff;
+	padding:10px;
+}
+
+
+
+.quantity {
+ display: inline-block; }
+
+.quantity .input-text.qty {
+ width: 60px;
+ height: 40px;
+ padding: 5px 5px;
+ text-align: center;
+ background-color: transparent;
+ border: 2px solid grey;
+ font-weight: bold;
+}
+
+.quantity.buttons_added {
+ text-align: left;
+ position: relative;
+ white-space: nowrap;
+ vertical-align: top;
+  }
+
+.quantity.buttons_added input {
+ display: inline-block;
+ margin: 1;
+ vertical-align: top;
+ box-shadow: 1px;
+}
+
+.quantity.buttons_added .minus,
+.quantity.buttons_added .plus {
+ padding: 10px;
+ font-weight :bold;
+ height: 40px;
+ width: 40px;
+ background-color: purple;
+ color: #fff;
+ border: 1px 1px 1px 1px solid black;
+ cursor:pointer;
+ font-size: 18px;
+ }
+
+.quantity.buttons_added .minus {
+ border-right: 0; }
+
+.quantity.buttons_added .plus {
+ border-left: 0; }
+
+.quantity.buttons_added .minus:hover,
+.quantity.buttons_added .plus:hover {
+ background: #ff4d94; }
+
+.quantity input::-webkit-outer-spin-button,
+.quantity input::-webkit-inner-spin-button {
+ -webkit-appearance: none;
+ -moz-appearance: none;
+ margin: 0; }
+
+ .quantity.buttons_added .minus:focus,
+.quantity.buttons_added .plus:focus {
+ outline: none; }
+
+
+
+</style>
+
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+<body>
+
+<section id="hero" style="background-image: url(../static/img/a.jpg);" >
+    <div class="hero-container">
+      <div class="wow fadeIn">
+
+
+        <h1 style="font-family: Comic Sans MS;color: pink;">Summify</h1>
+        <h2 style="font-family: Comic Sans MS; color: white;">-Simplified Summarization</h2>
+        <h4 style="font-family: Comic Sans MS; color: white;"><span class="rotating">Too Long Didn't Read</span></h4>
+        <div class="actions">
+          <a href="#Text1" class="btn-get-started" style="background-color:pink;color: black;border-radius:25px;">TRY SUMMIFY</a>
+        </div>
+      </div>
+    </div>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault" style="font-family: Comic Sans MS;">
+    <ul class="navbar-nav mr-auto">
+      <li>
+			<i class="material-icons" style="font-size:30px;color:black;background-color:pink;">short_text</i>
+		</li>
+		<li>
+			<a>
+				......
+			</a>
+		</li>
+
+
+      <li class="nav-item active">
+        <a class="nav-link" href="/"> HOME <span class="sr-only">(current)</span></a>
+      </li>
+		<li><a class="nav-link" href="#Text1"><b>TEXT</b></a></li>
+		<li> </li>
+        <li><a class="nav-link" href="#Document1">DOCUMENT</a></li>
+			<li><a class="nav-link" href="#URL1">URL</a></li>
+        <li><a class="nav-link" href="#News1">NEWS ARTICLES</a></li>
+          <li><a class="nav-link" href="#contact">CONTACT US</a></li>
+        <li><a class="nav-link" href="#" style="color:black;">.............................................</a></li>
+
+	</ul>
+<form  method="POST" action="/analyze_url3" class="form-inline my-2 my-lg-0">
+      <input name="raw_url" class="form-control mr-sm-2" placeholder="Enter an URL to browse the News Article.." aria-label="Search" style="width:500px;">
+      <button class="btn btn-outline" type="submit" style="background-color:pink; color:black;">BROWSE</button>
+    </form>
+  </div>
+</nav>
+  </section>
+<!--------------------------------TEXT SUMMARIZATION TAB------------------------------>
+	<br/>
+<div class="container" style="background-color: green;">
+<section id="Text1">
+
+	<div class="main-section">
+<br/>
+		<br/>
+
+	<h3 class="section-title" style="font-family: Comic Sans MS;" >Text Summarization</h3>
+            <div class="section-title-divider" style="background-color:green;"></div>
+		<hr style="background-color:green;">
+ 		<form method="POST" action="/analyze" >
+			<br/>
+		<textarea name="rawtext" cols="5" rows="5" class="form-control" required="true" placeholder="Enter or Paste Text Here" style="font-family: Comic Sans MS;"></textarea>
+		<br/>
+
+
+			<div class="quantity buttons_added" style="font-family: Comic Sans MS;">
+				<h5><b>Select number of sentences in summary: </b></h5>
+	<input type="button" value="-" class="minus" style="background-color: green;">
+				<input type="number" step="1" min="4" max="10" name="quantity" value="4" title="Qty" class="input-text qty text">
+				<input type="button" value="+" class="plus" style="background-color: green;">
+</div>
+			<br/>
+			<br/>
+		 <button type="reset" class="btn" style="background-color:green;color: white;font-family: Comic Sans MS;"><i class="fa fa-eraser"></i> Clear</button>
+
+		<!--<button style="font-size:24px">Button <i class="fa fa-list-ul"></i></button>-->
+         <button type="submit" class="btn" style="background-color:green; font-size:12px; color: white;font-family: Comic Sans MS;">Summify</button>
+        </form>
+
+
+	</div>
+	</section><!-- End TEXT Section -->
+	</div>
+	<br/>
+<br/>
+<!--------------------------------DOC SUMMARIZATION TAB------------------------------>
+
+<section id="Document1" style="font-family: Comic Sans MS;">
+<div class="container" style="background-color: #0865bd;">
+	<div class="main-section">
+<br/>
+		<br/>
+		<br/>
+	<h3 class="section-title">Document Summarization</h3>
+            <div class="section-title-divider" style="background-color:#0865bd;"></div>
+		<hr style="background-color:#0865bd;">
+ 		<form method="POST" action="{{ url_for('uploads')}}" enctype=multipart/form-data>
+
+	  <br/>
+	  <div style="border: 0.1px solid; padding:10px 20px; background-color: #fff;">
+		  <h5> <b>Select a file (.txt only)</b></h5>
+		  <br/>
+			<input type="file" name="txt_data" class="file-upload" required="true" >
+		</div>
+
+	  <br/>
+
+
+			<div class="quantity buttons_added">
+				<h5><b>Select number of sentences in summary: </b></h5>
+	<input type="button" value="-" class="minus" style="background-color:#0865bd;">
+				<input type="number" step="1" min="4" max="10" name="quantity" value="4" title="Qty" class="input-text qty text">
+				<input type="button" value="+" class="plus" style="background-color:#0865bd;">
+</div>
+			<br/>
+			<br/>
+		 <button type="reset" class="btn" style="background-color:#0865bd;"><i class="fa fa-eraser"></i> Clear</button>
+
+		<!--<button style="font-size:24px">Button <i class="fa fa-list-ul"></i></button>-->
+         <button type="submit" class="btn" style="background-color:#0865bd; font-size:12px;">Summify</button>
+
+			</form>
+	</div>
+	</div>
+	</section><!-- End About Section -->
+<br/>
+<!--------------------------------url SUMMARIZATION TAB------------------------------>
+	<div class="container" style="background-color: purple;font-family: Comic Sans MS;">
+<section id="URL1">
+
+	<div class="main-section">
+<br/>
+		<br/>
+		<br/>
+	<h3 class="section-title">Web Page Summarization</h3>
+            <div class="section-title-divider" style="background-color:purple;"></div>
+		<hr style="background-color:purple;">
+ 		<form method="POST" action="/analyze_url1">
+			<br/>
+		<textarea name="raw_url1" cols="5" rows="1" class="form-control" required="true" placeholder="Enter URL here.."></textarea>
+		<br/>
+
+			<div class="quantity buttons_added">
+				<h5><b>Select number of sentences in summary: </b></h5>
+	<input type="button" value="-" class="minus">
+				<input type="number" step="1" min="4" max="10" name="quantity" value="4" title="Qty" class="input-text qty text">
+				<input type="button" value="+" class="plus">
+</div>
+			<br/>
+			<br/>
+		 <button type="reset" class="btn" style="background-color:purple;"><i class="fa fa-eraser"></i> Clear</button>
+
+		<!--<button style="font-size:24px">Button <i class="fa fa-list-ul"></i></button>-->
+         <button type="submit" class="btn" style="background-color:purple; font-size:12px;">Summify</button>
+
+			</form>
+	</div>
+	</section><!-- End About Section -->
+	</div>
+<br/>
+<!--------------------------------NEWS SUMMARIZATION TAB------------------------------>
+	<div class="container" style="background-color: #a60525;font-family: Comic Sans MS;">
+<section id="News1">
+
+	<div class="main-section">
+<br/>
+		<br/>
+		<br/>
+	<h3 class="section-title">News Article Summarization</h3>
+            <div class="section-title-divider" style="background-color:#a60525;"></div>
+		<hr style="background-color:#a60525;">
+ 		 <form method="POST" action="/analyze_url" enctype=multipart/form-data>
+			   <textarea name="raw_url" cols="4" rows="2" class="form-control" required="true" placeholder="Enter an URL to browse for articles"></textarea>
+			<br/>
+             <div class="quantity buttons_added">
+				<h5><b>Select number of sentences in summary: </b></h5>
+	<input type="button" value="-" class="minus" style="background-color:#a60525;">
+				<input type="number" step="1" min="4" max="10" name="quantity" value="4" title="Qty" class="input-text qty text">
+				<input type="button" value="+" class="plus" style="background-color:#a60525;">
+</div>
+             <br/>
+             <br/>
+		 <button type="reset" class="btn" style="background-color:#a60525;"><i class="fa fa-eraser"></i> Clear</button>
+
+		<!--<button style="font-size:24px">Button <i class="fa fa-list-ul"></i></button>-->
+         <button type="submit" class="btn" style="background-color:#a60525; font-size:12px;">Summify</button>
+
+			</form>
+	</div>
+	</section><!-- End About Section -->
+	</div>
+<br/>
+
+
+
+<!-- ======= Contact Section ======= -->
+    <section id="contact" style="background-color: #f7edf4;font-family: Comic Sans MS;">
+      <div class="container wow fadeInUp">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="section-title">Contact Us</h3>
+            <div class="section-title-divider"></div>
+              <h6 class="section-description">We're here to help and answer any questions you might<br> have. We look forward to hear from you.</h6>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Vadodara</p>
+              </div>
+
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p>upasana@gmail.com</p>
+                  <p>aniket@gmail.com</p>
+              </div>
+
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 9408374878</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validate"></div>
+                </div>
+                <div class="mb-3">
+                  <div class="sent-message"></div>
+                </div>
+                <div class="text-center"><button onclick="myFunction()" type="submit">Send Message</button></div>
+                <script>
+                function myFunction() {
+                  alert("Your message has been sent. Thank you!");
+                }
+                </script>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+
+</div>
+<!-- ======= Footer ======= -->
+  <footer id="footer" style="font-family: Comic Sans MS;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <strong>SUMMIFY</strong>. All Rights Reserved
+          </div>
+
+          <div class="credits">
+			  <p>Too Long Didn't Read, Try SUMMIFY.</p>
+            Designed by <a href="https://bootstrapmade.com/">US.</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
+	<script src="{{ url_for('static', filename='js/script.js')}}"></script>
+
+<script src="{{ url_for('static', filename='js/main.js')}}"></script>
+<script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/wow/wow.min.js"></script>
+  <script src="static/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="static/vendor/superfish/superfish.min.js"></script>
+  <script src="static/vendor/hoverIntent/hoverIntent.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+  <script src="static/vendor/morphext/morphext.min.js"></script>
+
+<script type="text/javascript">
+	$('.file_upload').file_upload();
+</script>
+</body>
+</html>

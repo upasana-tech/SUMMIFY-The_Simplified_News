@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns:SUMMARy="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Summify App</title>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link href="static/css/style.css" rel="stylesheet">
+
+<style type="text/css">
+	.main-section{
+	margin:0 auto;
+	padding: 20px;
+	margin-top: 100px;
+	background-color: #fff;
+	box-shadow: 0px 0px 20px #c1c1c1;
+}
+	.w3-lobster {
+  	font-family: "Lobster", serif;
+  }
+#custom_card{
+	background-color:#fff;
+	color:#000;
+	padding:10px;
+
+}
+#custom_card2{
+	background-color:#f5f9ff;
+	color:#000;
+	padding:10px;
+}
+
+#custom_card3{
+	background-color:#f5f9ff;
+	padding:10px;
+}
+#custom_card4{
+	background-color:#f5f9ff;
+	color:#000;
+	padding:10px;
+}
+
+</style>
+
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li>
+			<i class="material-icons" style="font-size:30px;color:white;background-color:red;">short_text</i>
+		</li>
+		<li>
+			<a>
+				......
+			</a>
+		</li>
+
+
+      <li class="nav-item active">
+        <a class="nav-link" href="/" style="font-family: Comic Sans MS;"> HOME <span class="sr-only">(current)</span></a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
+<div class="main-section" style="margin: 0px;background-image: url(../static/img/1.jfif);">
+    <br/>
+  <div class="jumbotron" style="height:250px;background-color: #a60525;background-image: url(../static/img/images1.jfif);background-repeat: no-repeat;background-position: 1200px 20px;background-size: 250px 180px;">
+    <h1 style="font-family: Comic Sans MS;color: white;">Summify</h1>
+        <h5 style="font-family: Comic Sans MS; color: white;">-Simplified Summarization</h5>
+    </div>
+
+<div class="main-section" style="margin: 0px;font-family: Comic Sans MS;">
+
+	<div class="row">
+		<div class="col-md-6">
+          <div class="card mb-10" id="custom_card">
+              <h3 style="font-family: Comic Sans MS;"><b><center>ARTICLE</center></b></h3>
+			  <hr style="background-color: black;">
+              <p><b></b><h3><b><span>{{title}}</span></b></h3></p>
+              <img src="{{image}}" style="width:650px;height:300px;border:1px;">
+              <br/>
+          	  <p>{{ ctext }}</p>
+
+
+		</div>
+	</div>
+	<div class="col-md-6">
+          <div class="card mb-10 shadow-sm" id="custom_card2">
+          	<h3 style="font-family: Comic Sans MS;"><b><center>SUMMARY</center></b></h3>
+              <hr  style="background-color: black;">
+			<p id="p1">{{ final_summary }}</p>
+              <br/>
+              <div>
+
+            <button onclick="copyToClipboard('#p1')" class="btn btn-outline-dark">COPY SUMMARY <i class='fas fa-copy' style='font-size:20px;'></i></button>
+
+            <button onclick="saveFile()" class="btn btn-outline-dark">SAVE SUMMARY <i class='fas fa-save' style='font-size:20px;'></i></button>
+            </div>
+			  </div>
+
+        <br/>
+
+         <div class="col-md-12" id="custom_card4">
+				 <h3 style="font-family: Comic Sans MS;"><centre><b>KEYWORDS:</b></centre></h3>
+			  <hr>
+			  <b>
+
+<!-- For loop logic of jinja template -->
+
+                        {%for i in range(0, 10)%}
+
+                      <button style="background-color: black; color: white; border-radius:5px; padding: 5px 5px; margin:3px;">{{key_words[i]}} </button>
+
+                        {%endfor%}
+
+				  </b>
+
+
+	</div>
+        <br/>
+         <div style="border-style: solid;" class="col-md-12" id="custom_card3">
+
+				 <h3 style="font-family: Comic Sans MS;"><centre><b>RESULT:</b></centre></h3>
+			  <hr  style="background-color: black;">
+			  <b>
+                  <p style="background-color: #fae1e1;color:#000"><b>Total Words in Original Text: </b><span id="a1">{{input_words}}</span></p>
+                  <p style="background-color: #fae1e1; color: #000"><b>Total Words in Summary: </b><span id="a2">{{output_words}}</span> </p>
+                  <p style="background-color: #fae1e1; color: #000"><b>Reduction in Percentage: </b><span id="a3">{{per}}%</span></p>
+				  </b>
+
+
+	</div>
+
+
+
+
+    </div>
+
+</div>
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
+
+<script src="{{ url_for('static', filename='js/main.js')}}"></script>
+	<script src="{{ url_for('static', filename='js/saveFile.js')}}"></script>
+
+<script type="text/javascript">
+	$('.file_upload').file_upload();
+</script>
+	</div>
+		</div>
+
+<!-- ======= Footer ======= -->
+  <footer id="footer" style="font-family: Comic Sans MS;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <strong>SUMMIFY</strong>. All Rights Reserved
+          </div>
+
+          <div class="credits">
+			  <p>Too Long Didn't Read, Try SUMMIFY.</p>
+            Designed by <a href="https://bootstrapmade.com/">US.</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+</body>
+</html>

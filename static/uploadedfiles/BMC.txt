@@ -1,0 +1,51 @@
+KEY PARTNERS
+•CLOUD STORAGE PROVIDER
+•NEWS WEBSITES
+•DIGITAL CONTENT CREATORS 
+•GOOGLE PLAY STORE
+
+KEY ACTIVITIES
+•DATA CLEANING
+•GENERAL TEXT SUMMARIZATION
+•NEWS ARTICLE SUMMARIZATION
+•KEYWORDS EXTRACTION
+
+KEY RESOURCES
+•INTERNET CONNECTIVITY
+•NEWS ARTICLES
+•DIGITAL CONTENT
+
+VALUE PROPOSITIONS
+•WORKS INSTANTLY
+•IMPROVES PRODUCTIVITY
+•SAVES TIME
+•SAVES STORAGE SPACE
+
+CUSTOMER RELATIONSHIPS
+•AUTOMATED SERVICE
+•SELF-SERVICE
+•UPDATE NEW PATCHES
+
+CHANNELS
+•ADVERTISEMENTS
+•SOCIAL MEDIA
+
+CUSTOMER SEGMENTS
+•EDUCATION
+•SCIENCE AND R&D
+•PATENT RESEARCH
+•NEWS MEDIA
+•INDUSTRIES/MNC’S
+•PUBLISHERS
+ 
+COST STRUCTURE
+•MODIFICATION IN CODE
+•DESIGN
+
+REVENUE STREAMS
+•ASSET/SERVICE FEE
+•ADVERTISEMENTS
+
+Information on the World Wide Web and in other electronic form is increasing tremendously. Therefore there is a need for some form of information compression which can be achieved by various mining tasks like classification, clustering and summarization that help in understanding the information. Large amount of web content is news. News websites are daily overwhelmed with plenty of news articles. This paper presents an effective approach for single document news article summarization to help people obtain the most important information in the shortest time. The proposed approach is query based news article summarization. The results from web based on user query are filtered and refined and then result is directed to user. The technique used for summarization is keyword based extractive summarization. Keywords are the index terms that contain the most important information. The summarization technique identifies different features like thematic terms, named entity, title terms, numbers etc that are relevant to news articles to construct keyword table. This knowledge base is then used to score sentences and then top ranked sentences are presented as summary to the user. For evaluation of summary generated, extrinsic technique by question answering system is used. The purpose of using this evaluation technique is to test if the summary can be used instead of original document while preserving the overall importance of the document i.e. can summary covers all the important information of the document.
+In this new era, where tremendous  information  is  available  on  the  internet, it  is  most  important  to provide the improved mechanism to extract the information quickly and most efficiently . It is very difficult for human beings to manually   extract the   summary of a   large documents of text. There are plenty of   text material available on the internet.  So  there  is  a  problem   of  searching  for  relevant  documents  from  the number of documents  available, and absorbing  relevant information from  it. In  order to solve  the  above two problems,  the  automatic  text summarization  is  very  much  necessary. Text  summarization   is  the  process of identifying  the  most   important  meaningful   information  in  a  document  or  set  of  related  documents  and compressing them into a shorter version preserving its overall meanings. 
+Information on the World Wide Web and in other electronic form is increasing tremendously. Therefore there is a need for some form of information compression which can be achieved by various mining tasks like classification, clustering and summarization that help in understanding the information. Large amount of web content is news. News websites are daily overwhelmed with plenty of news articles. This paper presents an effective approach for single document news article summarization to help people obtain the most important information in the shortest time. The proposed approach is query based news article summarization. The results from web based on user query are filtered and refined and then result is directed to user. The technique used for summarization is keyword based extractive summarization. Keywords are the index terms that contain the most important information. The summarization technique identifies different features like thematic terms, named entity, title terms, numbers etc that are relevant to news articles to construct keyword table. This knowledge base is then used to score sentences and then top ranked sentences are presented as summary to the user. For evaluation of summary generated, extrinsic technique by question answering system is used. The purpose of using this evaluation technique is to test if the summary can be used instead of original document while preserving the overall importance of the document i.e. can summary covers all the important information of the document.
